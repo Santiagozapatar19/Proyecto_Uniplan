@@ -1,5 +1,5 @@
 export class CreateEventDto {
-  title: string;
+  title!: string;
   description?: string;
   date?: string;
 }

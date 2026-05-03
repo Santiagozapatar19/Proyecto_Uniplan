@@ -1,12 +1,12 @@
 import { UniplanUser } from 'src/auth/user/entities/uniplan-user.entity';
-import { Entity, PrimaryGeneratedColumn, Column, JoinColumn, ManyToMany, ManyToOne } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn } from 'typeorm';
 
 @Entity('profiles_professor')
 export class ProfileProfessor {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @ManyToOne(() => UniplanUser, (user) => user.profileProfessor)
+  @OneToOne(() => UniplanUser, (user) => user.profileProfessor)
   @JoinColumn({ name: 'userId' })
   user!: UniplanUser;
 
@@ -19,6 +19,6 @@ export class ProfileProfessor {
   @Column({ type: 'integer' })
   areaId!: number;
 
-  @Column({ type: 'varchar', length: 255, nullable: true })
-  specialization?: string;
+  @Column({ type: 'varchar', length: 100, nullable: true })
+  specialization!: string | null;
 }

@@ -1,13 +1,13 @@
 import { Role } from 'src/auth/role/entities/role.entity';
 import { UniplanUser } from 'src/auth/user/entities/uniplan-user.entity';
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
+import { Entity, PrimaryColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
 
 @Entity('user_roles')
 export class UserRole {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn({ type: 'integer' })
   userId!: number;
 
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn({ type: 'integer' })
   roleId!: number;
 
   @ManyToOne(() => UniplanUser, (user) => user.userRoles)
