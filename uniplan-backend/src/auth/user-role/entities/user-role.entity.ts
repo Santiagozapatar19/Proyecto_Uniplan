@@ -21,6 +21,6 @@ export class UserRole {
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   assignedAt!: Date;
 
-  @Column({ nullable: true })
+  @Column({ type: 'integer', nullable: true })
   assignedBy!: number | null;
 }

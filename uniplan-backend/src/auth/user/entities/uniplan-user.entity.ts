@@ -30,15 +30,15 @@ export class UniplanUser {
   @Column({ type: 'integer', nullable: true })
   employeeId!: number | null;
 
-  @OneToMany(() => UserRole, (userRole) => userRole.userId)
+  @OneToMany(() => UserRole, (userRole) => userRole.user)
   userRoles!: UserRole[];
 
-  @OneToOne(() => ProfileBienestar, (profile) => profile.user, { nullable: true })
+  @OneToOne(() => ProfileBienestar, (profile) => profile.user, { nullable: true, cascade: true })
   profileBienestar!: ProfileBienestar | null;
 
-  @OneToOne(() => ProfileLeader, (profile) => profile.user, { nullable: true })
+  @OneToOne(() => ProfileLeader, (profile) => profile.user, { nullable: true, cascade: true })
   profileLeader!: ProfileLeader | null;
 
-  @OneToOne(() => ProfileProfessor, (profile) => profile.user, { nullable: true })
+  @OneToOne(() => ProfileProfessor, (profile) => profile.user, { nullable: true, cascade: true })
   profileProfessor!: ProfileProfessor | null;
 }

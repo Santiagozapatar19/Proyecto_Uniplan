@@ -12,6 +12,6 @@ export class Permission {
   @Column({ type: 'varchar', length: 255 })
   description!: string;
 
-  @OneToMany(() => RolePermissions, (rolePermission) => rolePermission.permissionId)
+  @OneToMany(() => RolePermissions, (rolePermission) => rolePermission.permission)
   rolePermissions!: RolePermissions[];
 }

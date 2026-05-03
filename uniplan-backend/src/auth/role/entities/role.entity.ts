@@ -13,9 +13,9 @@ export class Role {
   @Column({ type: 'varchar', length: 255 })
   description!: string;
 
-  @OneToMany(() => UserRole, (userRole) => userRole.roleId)
+  @OneToMany(() => UserRole, (userRole) => userRole.role)
   userRoles!: UserRole[];
 
-  @OneToMany(() => RolePermissions, (rolePermission) => rolePermission.roleId)
+  @OneToMany(() => RolePermissions, (rolePermission) => rolePermission.role)
   rolePermissions!: RolePermissions[];
 }

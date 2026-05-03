@@ -1,7 +1,7 @@
 import { UniplanUser } from 'src/auth/user/entities/uniplan-user.entity';
 import { Entity, PrimaryGeneratedColumn, Column, JoinColumn, ManyToMany, ManyToOne } from 'typeorm';
 
-@Entity('profile_professors')
+@Entity('profiles_professor')
 export class ProfileProfessor {
   @PrimaryGeneratedColumn()
   id!: number;
@@ -10,15 +10,15 @@ export class ProfileProfessor {
   @JoinColumn({ name: 'userId' })
   user!: UniplanUser;
 
-  @Column()
+  @Column({ type: 'integer' })
   userId!: number;
 
-  @Column()
+  @Column({ type: 'integer' })
   facultyCode!: number;
 
-  @Column()
+  @Column({ type: 'integer' })
   areaId!: number;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', length: 255, nullable: true })
   specialization?: string;
 }

@@ -1,7 +1,7 @@
 import { UniplanUser } from 'src/auth/user/entities/uniplan-user.entity';
 import { Entity, PrimaryGeneratedColumn, Column, JoinColumn, ManyToOne } from 'typeorm';
 
-@Entity('profile_leaders')
+@Entity('profiles_leader')
 export class ProfileLeader {
   @PrimaryGeneratedColumn()
   id!: number;
@@ -10,16 +10,16 @@ export class ProfileLeader {
   @JoinColumn({ name: 'userId' })
   user!: UniplanUser;
 
-  @Column()
+  @Column({ type: 'integer' })
   userId!: number;
 
-  @Column()
+  @Column({ type: 'varchar', length: 80 })
   academicProgram!: string;
 
-  @Column()
+  @Column({ type: 'integer' })
   semester!: number;
 
-  @Column()
+  @Column({ type: 'varchar', length: 100 })
   associateGroup!: string;
 
 }
