@@ -7,7 +7,10 @@ export class ProfileLeader {
   id!: number;
 
   @ManyToOne(() => UniplanUser, (user) => user.profileLeader)
-  @JoinColumn()
+  @JoinColumn({ name: 'userId' })
+  user!: UniplanUser;
+
+  @Column()
   userId!: number;
 
   @Column()

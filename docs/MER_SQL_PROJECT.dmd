@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MER_SQL_PROJECT" id="5A3782F4-B3B6-DC2B-6629-4D10B5B18CC9" version="3.5">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 21:38:12 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5A3782F4-B3B6-DC2B-6629-4D10B5B18CC9</designId>
+</OSDM_Design>

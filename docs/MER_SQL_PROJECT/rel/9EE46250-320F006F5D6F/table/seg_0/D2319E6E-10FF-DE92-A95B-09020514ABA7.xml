@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D2319E6E-10FF-DE92-A95B-09020514ABA7" name="USER_ROLES">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:11:40 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="UNIPLAN_USERS_idUser" id="52C2F578-DFB3-ABEE-02D4-9C369B2EE760">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:45:49 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="052C69DE-2A8C-E26D-9EFA-6DA815CD2A50" referredColumn="EBC217B5-3059-9C27-749C-623DCDCE02FF"/>
+</associations>
+</Column>
+<Column name="ROLES_idRole" id="A2830D56-E518-A8A6-6D84-C2204DDFC114">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:46:20 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA969D7C-AFEE-AA0A-9591-274C281807F0" referredColumn="097C41C9-78A5-E04B-EFC0-04BFC39148FB"/>
+</associations>
+</Column>
+<Column name="assignedAt" id="FCC2BE06-B986-DE2B-A402-6DE29C4E3485">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:49:05 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assignedBy" id="BF5D54F3-D063-9099-A591-B575E1D1AC67">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:49:05 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DE2A790A-93E0-6A16-C750-41EB39ABE998" name="USER_ROLES_PK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:45:45 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2830D56-E518-A8A6-6D84-C2204DDFC114"/>
+<colUsage columnID="52C2F578-DFB3-ABEE-02D4-9C369B2EE760"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4BA18AC4-BADC-B6A3-007D-70A827D153D9" name="USER_ROLES_UNIPLAN_USERS_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:45:49 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52C2F578-DFB3-ABEE-02D4-9C369B2EE760"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A358D689-211D-CB34-214B-661C468F1C60" name="USER_ROLES_ROLES_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:46:20 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2830D56-E518-A8A6-6D84-C2204DDFC114"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

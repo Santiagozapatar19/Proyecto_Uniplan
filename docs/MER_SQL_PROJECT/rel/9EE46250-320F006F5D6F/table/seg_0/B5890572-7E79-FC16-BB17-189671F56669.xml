@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B5890572-7E79-FC16-BB17-189671F56669" name="PROFILES_BIENESTAR">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:56:27 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E4CD2B6C-D903-57C4-FE75-BED15C8AB39F">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:57:40 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIPLAN_USERS_idUser" id="8BF0538F-88B6-8BB1-C3AC-58894F609C8C">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:58:03 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1BF1630D-CAA3-A09C-D843-9C7EA7D0A394" referredColumn="EBC217B5-3059-9C27-749C-623DCDCE02FF"/>
+</associations>
+</Column>
+<Column name="administrativeArea" id="AADE84AD-9020-1830-092F-9EFF1A889E9D">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:58:38 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="charge" id="1992214B-9642-D5A3-B9DA-9E25672E0EE1">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:59:17 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A5187A1-F6B5-C50D-B471-157DB2F07F70" name="PROFILES_BIENESTAR_PK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:57:40 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4CD2B6C-D903-57C4-FE75-BED15C8AB39F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="624414F8-66C8-CA35-D338-52BCFF1DB2C2" name="PROFILES_BIENESTAR_UNIPLAN_USERS_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:58:03 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BF0538F-88B6-8BB1-C3AC-58894F609C8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

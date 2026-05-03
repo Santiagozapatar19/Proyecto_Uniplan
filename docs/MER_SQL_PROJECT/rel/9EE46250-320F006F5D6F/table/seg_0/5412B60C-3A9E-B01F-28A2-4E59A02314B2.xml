@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5412B60C-3A9E-B01F-28A2-4E59A02314B2" name="PROFILE_LEADERS">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:13:24 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6F6F65E7-DB4C-D192-E0FF-73BB39598201">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:53:15 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIPLAN_USERS_idUser" id="60BFBE91-B3CF-E973-85E3-063200C869AC">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:53:23 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCCC75F0-ED46-571B-8930-3F37A1EF2293" referredColumn="EBC217B5-3059-9C27-749C-623DCDCE02FF"/>
+</associations>
+</Column>
+<Column name="academicProgram" id="2FFC1D8A-BB48-D642-80E1-5749C720DA5D">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:55:26 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="semester" id="8ACA97BE-FEAD-167A-39D4-542093FA3901">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:55:26 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="associateGroup" id="FB04F59E-5468-0186-4E14-1E415E07CBEE">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:55:26 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DBB1C343-682D-4A03-7C48-1180D07BD551" name="PROFILE_LEADERS_PK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:53:15 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F6F65E7-DB4C-D192-E0FF-73BB39598201"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="475467BB-F377-B66A-CD09-BC3EA01EE2FB" name="PROFILE_LEADERS_UNIPLAN_USERS_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:53:23 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60BFBE91-B3CF-E973-85E3-063200C869AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

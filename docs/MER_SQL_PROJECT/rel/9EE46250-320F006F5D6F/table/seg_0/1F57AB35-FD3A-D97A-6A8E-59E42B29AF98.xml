@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1F57AB35-FD3A-D97A-6A8E-59E42B29AF98" name="PERMISSIONS">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:05:36 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idPermission" id="33A77C11-AECA-199D-69E0-F4CC216AE4BB">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:23:27 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="namePermission" id="7D97C197-08FD-440B-E297-7A3C3AB37C7D">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:24:04 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="A87F7F04-06E3-E28A-41BF-74AFB8469CCD">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:24:31 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2169ACF9-95EA-DBAF-C4B4-EB1E5878F51C" name="PERMISSIONS_PK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:23:27 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33A77C11-AECA-199D-69E0-F4CC216AE4BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

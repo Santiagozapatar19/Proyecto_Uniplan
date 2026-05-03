@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DCCC75F0-ED46-571B-8930-3F37A1EF2293" containerWithKeyObject="5412B60C-3A9E-B01F-28A2-4E59A02314B2" localFKIndex="475467BB-F377-B66A-CD09-BC3EA01EE2FB" name="PROFILE_LEADERS_UNIPLAN_USERS_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:53:23 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<referredTableLongName>UNIPLAN_USERS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>867170B6-87D4-4CD2-FEB0-465C89055A60</referredTableID>
+<keyObject>4D347251-C3BF-D2D2-2F7B-602C33F665F8</keyObject>
+<referredKeyID>4D347251-C3BF-D2D2-2F7B-602C33F665F8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idUser</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

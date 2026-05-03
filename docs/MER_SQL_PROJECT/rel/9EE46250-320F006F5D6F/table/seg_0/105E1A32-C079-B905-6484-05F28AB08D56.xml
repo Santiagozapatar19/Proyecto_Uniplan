@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="105E1A32-C079-B905-6484-05F28AB08D56" name="ROLE_PERMISSIONS">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:05:56 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ROLES_idRole" id="17406530-785A-326B-FA87-2DF29A62A955">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:25:29 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="717FCD04-F8BB-C350-DCAC-54E6591AABF1" referredColumn="097C41C9-78A5-E04B-EFC0-04BFC39148FB"/>
+</associations>
+</Column>
+<Column name="PERMISSIONS_idPermission" id="2AEBD64B-0DBF-1941-BCAA-E1D36FDF882C">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:25:57 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DA8E311-26B0-FE51-C91B-779923D4BA28" referredColumn="33A77C11-AECA-199D-69E0-F4CC216AE4BB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DC4DFEDF-2B00-ECC4-CB49-AA61C0BA5455" name="ROLE_PERMISSIONS_PK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:25:25 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17406530-785A-326B-FA87-2DF29A62A955"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E80ABBA2-4F32-20F5-9D8D-B064AB2FB489" name="ROLE_PERMISSIONS_ROLES_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:25:29 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17406530-785A-326B-FA87-2DF29A62A955"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3B224B0-4AA7-8476-48A2-5ED2E894623E" name="ROLE_PERMISSIONS_PERMISSIONS_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:25:57 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2AEBD64B-0DBF-1941-BCAA-E1D36FDF882C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

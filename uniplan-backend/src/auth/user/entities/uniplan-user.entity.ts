@@ -24,21 +24,21 @@ export class UniplanUser {
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createdAt!: Date;
 
-  @Column({ type: 'integer' })
-  studentId!: number;
+  @Column({ type: 'integer', nullable: true })
+  studentId!: number | null;
 
-  @Column({ type: 'integer' })
-  employeeId!: number;
+  @Column({ type: 'integer', nullable: true })
+  employeeId!: number | null;
 
   @OneToMany(() => UserRole, (userRole) => userRole.userId)
   userRoles!: UserRole[];
 
-  @OneToMany(() => ProfileBienestar, (profile) => profile.userId)
-  profileBienestar!: ProfileBienestar[];
+  @OneToOne(() => ProfileBienestar, (profile) => profile.user, { nullable: true })
+  profileBienestar!: ProfileBienestar | null;
 
-  @OneToMany(() => ProfileLeader, (profile) => profile.userId)
-  profileLeader!: ProfileLeader[];
+  @OneToOne(() => ProfileLeader, (profile) => profile.user, { nullable: true })
+  profileLeader!: ProfileLeader | null;
 
-  @OneToMany(() => ProfileProfessor, (profile) => profile.userId)
-  profileProfessor!: ProfileProfessor[];
+  @OneToOne(() => ProfileProfessor, (profile) => profile.user, { nullable: true })
+  profileProfessor!: ProfileProfessor | null;
 }

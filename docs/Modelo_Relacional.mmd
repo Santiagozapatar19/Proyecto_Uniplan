@@ -1,0 +1,66 @@
+erDiagram
+  uniplan_users {
+    varchar id PK
+    varchar student_id FK
+    varchar employee_id FK
+    varchar email
+    varchar password_hash
+    varchar role
+    boolean is_active
+    timestamp created_at
+  }
+
+  organizer_profiles {
+    varchar id PK
+    varchar user_id FK
+    varchar organizer_type
+    varchar extra_field_1
+    varchar extra_field_2
+  }
+
+  events {
+    varchar id PK
+    varchar unique_code
+    varchar title
+    varchar event_type
+    text description
+    timestamp start_time
+    timestamp end_time
+    varchar location
+    integer max_capacity
+    integer current_count
+    varchar organizer_id FK
+    varchar status
+    timestamp created_at
+  }
+
+  event_details {
+    varchar id PK
+    varchar event_id FK
+    jsonb extra_attributes
+  }
+
+  registrations {
+    varchar id PK
+    varchar user_id FK
+    varchar event_id FK
+    timestamp registered_at
+    varchar status
+  }
+
+  event_stats {
+    varchar id PK
+    varchar event_id FK
+    integer total_registered
+    integer total_cancelled
+    integer total_attended
+    numeric occupancy_pct
+    timestamp updated_at
+  }
+
+  uniplan_users ||--o{ organizer_profiles : tiene
+  uniplan_users ||--o{ registrations : realiza
+  events ||--o{ registrations : recibe
+  events ||--|| event_details : tiene
+  events ||--|| event_stats : agrega
+  organizer_profiles ||--o{ events : crea

@@ -5,13 +5,16 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 't
 @Entity('role_permissions')
 export class RolePermissions {
   @PrimaryGeneratedColumn()
-  id!: number;
-
-  @ManyToOne(() => Role, (role) => role.rolePermissions)
-  @JoinColumn()
   roleId!: number;
 
-  @ManyToOne(() => Permission, (permission) => permission.rolePermissions)
-  @JoinColumn()
+  @PrimaryGeneratedColumn()
   permissionId!: number;
+
+  @ManyToOne(() => Role, (role) => role.rolePermissions)
+  @JoinColumn({name: 'roleId'})
+  role!: Role;
+
+  @ManyToOne(() => Permission, (permission) => permission.rolePermissions)
+  @JoinColumn({name: 'permissionId'})
+  permission!: Permission;
 }

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="717FCD04-F8BB-C350-DCAC-54E6591AABF1" containerWithKeyObject="105E1A32-C079-B905-6484-05F28AB08D56" localFKIndex="E80ABBA2-4F32-20F5-9D8D-B064AB2FB489" name="ROLE_PERMISSIONS_ROLES_FK">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 22:25:29 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<referredTableLongName>ROLES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D434528C-6576-4AF8-746A-C5D675BEFBA0</referredTableID>
+<keyObject>039657C5-7FD2-86CC-036E-F0E0BD10B26C</keyObject>
+<referredKeyID>039657C5-7FD2-86CC-036E-F0E0BD10B26C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idRole</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

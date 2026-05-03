@@ -5,19 +5,22 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 't
 @Entity('user_roles')
 export class UserRole {
   @PrimaryGeneratedColumn()
-  id!: number;
-
-  @ManyToOne(() => UniplanUser, (user) => user.userRoles)
-  @JoinColumn()
   userId!: number;
 
-  @ManyToOne(() => Role, (role) => role.userRoles)
-  @JoinColumn()
+  @PrimaryGeneratedColumn()
   roleId!: number;
 
-  @Column({ type: 'timestamp', nullable: true })
+  @ManyToOne(() => UniplanUser, (user) => user.userRoles)
+  @JoinColumn({ name: 'userId' })
+  user!: UniplanUser;
+
+  @ManyToOne(() => Role, (role) => role.userRoles)
+  @JoinColumn({ name: 'roleId' })
+  role!: Role;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   assignedAt!: Date;
 
-  @Column()
-  assignedBy!: number;
+  @Column({ nullable: true })
+  assignedBy!: number | null;
 }

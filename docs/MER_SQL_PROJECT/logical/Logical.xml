@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="42F2037D-90DC-FD91-E3F8-BC4EE6260403" mainViewID="8D615E45-3074-EB36-E0BA-8F801299F314">
+<createdBy>gigi</createdBy>
+<createdTime>2026-04-30 21:38:12 UTC</createdTime>
+<ownerDesignName>MER_SQL_PROJECT</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
