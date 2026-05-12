@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { AuthModule } from './auth/auth.module';
 import { InstitutionalModule } from './institutional/institutional.module';
+import { UserModule } from './auth/user/user.module';
 import { EventsModule } from './events/events.module';
 import { UniplanUsersModule } from './uniplan-users/uniplan-users.module';
 import { EnrollmentsModule } from './enrollments/enrollments.module';
@@ -14,7 +15,7 @@ import { ReportsModule } from './reports/reports.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
 
-    // ── Conexión 1: PostgreSQL UniPlan (TypeORM, conexión nombrada 'uniplan') ──
+    // ── Conexión 1: PostgreSQL UniPlan ─────────────────────────
     TypeOrmModule.forRootAsync({
       name: 'uniplan',
       imports: [ConfigModule],
@@ -31,7 +32,7 @@ import { ReportsModule } from './reports/reports.module';
       }),
     }),
 
-    // ── Conexión 2: PostgreSQL Institucional (solo lectura, sin synchronize) ──
+    // ── Conexión 2: PostgreSQL Institucional (solo lectura) ────
     TypeOrmModule.forRootAsync({
       name: 'institutional',
       imports: [ConfigModule],
@@ -48,7 +49,7 @@ import { ReportsModule } from './reports/reports.module';
       }),
     }),
 
-    // ── Conexión 3: MongoDB (Mongoose)
+    // ── Conexión 3: MongoDB ────────────────────────────────────
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -59,7 +60,8 @@ import { ReportsModule } from './reports/reports.module';
 
     AuthModule,
     InstitutionalModule,
-    EventsModule,
+    UserModule,        // RF01 registro estudiantes, RF03 registro organizadores
+    EventsModule,      // RF05-RF13 gestión de eventos
     UniplanUsersModule,
     EnrollmentsModule,
     ReportsModule,

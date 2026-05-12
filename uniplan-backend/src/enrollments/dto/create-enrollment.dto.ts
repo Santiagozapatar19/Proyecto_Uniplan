@@ -1,4 +1,7 @@
+import { IsMongoId, IsNotEmpty } from 'class-validator';
+
 export class CreateEnrollmentDto {
-  studentId: string;
-  courseId: string;
+  @IsMongoId()
+  @IsNotEmpty()
+  eventId!: string; // _id del evento en MongoDB
 }
