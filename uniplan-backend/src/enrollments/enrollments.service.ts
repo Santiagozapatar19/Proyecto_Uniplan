@@ -81,8 +81,8 @@ export class EnrollmentsService {
         $push: {
           enrollments: {
             studentId: user.studentId,
-            fullName: instStudent.fullName,
-            studentCode: instStudent.code,
+            fullName: `${instStudent.firstName} ${instStudent.lastName}`,
+            studentCode: String(instStudent.id),
             email: user.email,
             enrollmentDate,
             status: 'active',
@@ -207,11 +207,12 @@ export class EnrollmentsService {
       );
     }
 
-    // Verificar semestre mínimo si aplica
+    // Verificar semestre mínimo si aplica (si la BD institucional contiene ese campo)
     const minimumSemester = event.details?.minimumSemester;
     if (minimumSemester) {
       const student = await this.studentRepo.findOne({ where: { id: user.studentId! } });
-      if (student && student.semester < minimumSemester) {
+      const semester = (student as any)?.semester;
+      if (semester !== undefined && semester < minimumSemester) {
         throw new BadRequestException(
           `Este taller requiere estar en semestre ${minimumSemester} o superior`,
         );
